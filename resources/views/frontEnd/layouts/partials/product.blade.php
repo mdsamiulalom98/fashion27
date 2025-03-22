@@ -43,7 +43,7 @@
                     <input type="hidden" name="product_color" value="{{ $value->variable->color ?? '' }}">
                     <input type="hidden" name="product_size" value="{{ $value->variable->size ?? '' }}">
                     <button type="submit">
-                        @include('frontEnd.layouts.svg.order_now') অর্ডার করুন </button>
+                        @include('frontEnd.layouts.svg.order_now') Order Now </button>
                 </form>
             </div>
         </div>

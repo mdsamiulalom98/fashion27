@@ -235,7 +235,7 @@
                                                         id="order_now_btn" data-id="{{ $details->id }}"
                                                         class="btn px-4 custom-shake order_now_btn order_now_btn_m">
                                                         @include('frontEnd.layouts.svg.order_now')
-                                                        অর্ডার করুন
+                                                        Order Now
                                                     </button>
                                                     {{-- <input type="submit" class="btn px-4 order_now_btn order_now_btn_m"
                                                         onclick="return sendSuccess();" name="order_now"
@@ -250,7 +250,7 @@
                                                         <i class="fa-solid fa-phone"></i>
                                                     </div>
                                                     <div class="contact-des">
-                                                        <h5>কল করুন</h5>
+                                                        <h5>Call Now</h5>
                                                         <h6>
                                                             {{ $contact->phone }}
                                                         </h6>
@@ -262,7 +262,7 @@
                                                         <i class="fa-brands fa-whatsapp"></i>
                                                     </div>
                                                     <div class="contact-des">
-                                                        <h5>মেসেজ করুন</h5>
+                                                        <h5>Message Us</h5>
                                                         <h6>
                                                             {{ $contact->phone }}
                                                         </h6>
@@ -580,7 +580,7 @@
         <div class="container">
             <div class="row">
                 <div class="related-title">
-                    <h5>রিলেটেড প্রোডাক্ট</h5>
+                    <h5>Related Products</h5>
                 </div>
             </div>
             <div class="row">

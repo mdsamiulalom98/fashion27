@@ -22,17 +22,17 @@
                             @csrf
                             <div class="checkout-card">
                                 <div class="checkout-header">
-                                    <h6 class="check-position">ক্যাশ অন ডেলিভারিতে অর্ডার করতে আপনার তথ্য দিন</h6>
+                                    <h6 class="check-position">Enter your information to order cash on delivery.</h6>
                                 </div>
                                 <div class="checkout-body">
                                     <div class="row">
                                         <div class="col-sm-12 ">
                                             <div class="form-group checkout-input-box mb-3">
-                                                <label for="name"> নামঃ *</label>
+                                                <label for="name"> Name *</label>
                                                 <input type="text" id="name"
                                                     class="form-control @error('name') is-invalid @enderror"
                                                     name="name" value="{{ old('name') }}"
-                                                    placeholder="আপনার নাম লিখুন" required />
+                                                    placeholder="Enter your name" required />
                                                 <i class="fa-solid fa-user"></i>
                                                 @error('name')
                                                     <span class="invalid-feedback" role="alert">
@@ -44,13 +44,13 @@
                                         <!-- col-end -->
                                         <div class="col-sm-12">
                                             <div class="form-group checkout-input-box mb-3">
-                                                <label for="phone"> মোবাইলঃ *</label>
+                                                <label for="phone"> Phone Number *</label>
                                                 <input type="text" minlength="11" maxlength="11" pattern="0[0-9]+"
                                                     title="please enter number only and 0 must first character"
                                                     title="Please enter an 11-digit number." id="phone"
                                                     class="form-control @error('phone') is-invalid @enderror"
                                                     name="phone" value="{{ old('phone') }}"
-                                                    placeholder="১১ ডিজিটের মোবাইল নাম্বার লিখুন" required />
+                                                    placeholder="Enter 11 digit mobile number." required />
                                                 <i class="fa-solid fa-phone"></i>
                                                 @error('phone')
                                                     <span class="invalid-feedback" role="alert">
@@ -62,11 +62,11 @@
                                         <!-- col-end -->
                                         <div class="col-sm-12">
                                             <div class="form-group checkout-input-box mb-3">
-                                                <label for="address"> ঠিকানাঃ *</label>
+                                                <label for="address"> Address *</label>
                                                 <input type="address" id="address"
                                                     class="form-control @error('address') is-invalid @enderror"
                                                     name="address"
-                                                    placeholder="আপনার এলাকা থানা ও জেলার নাম লিখুন এখানে"
+                                                    placeholder="Enter the name of your local area and district here."
                                                     value="{{ old('address') }}" required />
                                                 <i class="fa-solid fa-map"></i>
                                                 @error('email')
@@ -78,11 +78,11 @@
                                         </div>
                                            <div class="col-sm-12">
                                         <div class="form-group mb-3">
-                                            <label for="area"> ডেলিভারি এরিয়া নিবার্চন করুন *</label>
+                                            <label for="area"> Select delivery area *</label>
                                             <select type="area" id="area"
                                                 class="form-control @error('area') is-invalid @enderror" name="area"
                                                 required>
-                                                <option value="">ডেলিভারি এরিয়া নিবার্চন করুন</option>
+                                                <option value="">Select delivery area</option>
                                                 @foreach ($shippingcharge as $key => $value)
                                                     <option value="{{ $value->id }}">{{ $value->name }}</option>
                                                 @endforeach
@@ -97,7 +97,7 @@
                                     <!-- col-end -->
                                         <div class="col-sm-12">
                                             <div class="radio_payment">
-                                                <label id="payment_method">পেমেন্ট মেথড</label>
+                                                <label id="payment_method">Payment Method</label>
                                             </div>
                                             <div class="payment-methods">
 
@@ -105,7 +105,7 @@
                                                     <input class="form-check-input" type="radio" name="payment_method"
                                                         id="inlineRadio1" value="Cash On Delivery" checked required />
                                                     <label class="form-check-label" for="inlineRadio1">
-                                                        ক্যাশ অন ডেলিভারি
+                                                        Cash on Delivery
                                                     </label>
                                                 </div>
                                                 @if ($bkash_gateway)
@@ -114,7 +114,7 @@
                                                             name="payment_method" id="inlineRadio2" value="bkash"
                                                             required />
                                                         <label class="form-check-label" for="inlineRadio2">
-                                                            বিকাশ
+                                                            bKash
                                                         </label>
                                                     </div>
                                                 @endif
@@ -124,7 +124,7 @@
                                                             name="payment_method" id="inlineRadio3" value="shurjopay"
                                                             required />
                                                         <label class="form-check-label" for="inlineRadio3">
-                                                            নগদ
+                                                            Nagad
                                                         </label>
                                                     </div>
                                                 @endif
@@ -141,7 +141,7 @@
                     <div class="cart_details mt-2">
                         <div class="checkout-card">
                             <div class="checkout-header">
-                                <h5>অর্ডার ইনফরমেশন</h5>
+                                <h5>Order Information</h5>
                             </div>
                             <div class="card-body cartlist">
                                 <div class="table-responsive checkout-cart-wrapper">
@@ -223,7 +223,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <button type="submit" class="order_place custom-shake" type="submit"> অর্ডার কনফার্ম করুন </button>
+                                    <button type="submit" class="order_place custom-shake" type="submit"> Confirm Order</button>
                                 </div>
                             </div>
                         </div>
